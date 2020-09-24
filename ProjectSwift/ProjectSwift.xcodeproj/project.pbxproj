@@ -18,6 +18,7 @@
 		9C3B33D0251B9C640063E574 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3B33CF251B9C640063E574 /* APIService.swift */; };
 		9C3B33D2251B9D0D0063E574 /* APIServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3B33D1251B9D0D0063E574 /* APIServiceError.swift */; };
 		9C3B33D4251B9D3B0063E574 /* CityWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3B33D3251B9D3B0063E574 /* CityWeather.swift */; };
+		9C766CDB251D24A700D5929A /* DataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C766CDA251D24A700D5929A /* DataViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		9C3B33CF251B9C640063E574 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		9C3B33D1251B9D0D0063E574 /* APIServiceError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIServiceError.swift; sourceTree = "<group>"; };
 		9C3B33D3251B9D3B0063E574 /* CityWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityWeather.swift; sourceTree = "<group>"; };
+		9C766CDA251D24A700D5929A /* DataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,9 +68,10 @@
 		9C3B33B0251B9B0B0063E574 /* ProjectSwift */ = {
 			isa = PBXGroup;
 			children = (
-				9C3B33CE251B9C360063E574 /* Services */,
+				9C766CD9251D245400D5929A /* ViewModel */,
 				9C3B33CD251B9C2C0063E574 /* Views */,
 				9C3B33CC251B9C230063E574 /* Models */,
+				9C3B33CE251B9C360063E574 /* Services */,
 				9C3B33C5251B9B2F0063E574 /* Storybaords */,
 				9C3B33B1251B9B0B0063E574 /* AppDelegate.swift */,
 				9C3B33B3251B9B0B0063E574 /* SceneDelegate.swift */,
@@ -112,6 +115,14 @@
 				9C3B33D1251B9D0D0063E574 /* APIServiceError.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		9C766CD9251D245400D5929A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9C766CDA251D24A700D5929A /* DataViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,6 +203,7 @@
 				9C3B33B2251B9B0B0063E574 /* AppDelegate.swift in Sources */,
 				9C3B33D4251B9D3B0063E574 /* CityWeather.swift in Sources */,
 				9C3B33D0251B9C640063E574 /* APIService.swift in Sources */,
+				9C766CDB251D24A700D5929A /* DataViewModel.swift in Sources */,
 				9C3B33B4251B9B0B0063E574 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
