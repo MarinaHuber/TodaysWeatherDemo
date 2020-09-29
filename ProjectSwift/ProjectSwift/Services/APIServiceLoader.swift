@@ -1,5 +1,5 @@
 //
-//  APIService.swift
+//  APIServiceLoader.swift
 //  ProjectSwift
 //
 //  Created by Marina Huber on 9/23/20.
@@ -9,54 +9,44 @@
 import Foundation
 
 
-struct APIService {
+struct APIServiceLoader {
     
-   // static let shared   = APIService()
-//    let x = 0
-//    let y = 0
-//    private init(_ param1:(Int), param2: (Int)) {
-//        self.x = param1
-//        self.y = param2
-//    }
+    static let client = APIServiceLoader()
+    private init() {}
     
-    func request<T: Decodable>(_ search: String, _ endpoint: APIEndpoints, model: T.Type, parameters:[String: String], completion: @escaping (Result<T, Error>) -> ()) {
-        var components = URLComponents()
-        components.scheme = endpoint.scheme
-        components.host = endpoint.host
-        components.path = endpoint.path
-        components.queryItems = endpoint.queryItems
-        print(components.url?.absoluteString)
+    func request<T: Decodable>(_ endpoint: Endpoint, model: T.Type, completion: @escaping (Result<T, APIServiceError>) -> ()) {
         
-        let request = URLRequest(url: components.url!)
-        guard let url1 = components.url else {
-            return
+        guard let url = endpoint.url else {
+            return completion(.failure(.responseError))
         }
-        let urlString = String("\(Keys.base_URL)?q=" + (search.replacingOccurrences(of: " ", with: "%20")) + "&units=metric&appid=\(Keys.publicKey)")
-        guard let url = URL(string: urlString) else { return }
         
-        let session = URLSession(configuration: .default)
-        session.dataTask(with: request, completionHandler: { data, response, error in
-            guard error == nil else {
-                completion(.failure(APIServiceError.responseError))
+        let task = URLSession.shared.dataTask(with: url) { data, response, error in
+            
+            if let _ = error {
+                completion(.failure(.responseError))
                 return
             }
-            guard let data = data else { return }
-            do {
-                let httpResponse = response as? HTTPURLResponse
-                if httpResponse?.statusCode != 200 {
-                    assert(false, "statusCode should be 200, but is \(String(describing: httpResponse?.statusCode))")
-                }
-                let decoder = JSONDecoder()
-                decoder.dateDecodingStrategy = .iso8601
-                let responseObject = try decoder.decode(T.self, from: data)
-                
-                DispatchQueue.main.async {
-                    completion(.success(responseObject))
-                }
-            } catch let error {
-                completion(.failure(error))
+            
+            guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
+                completion(.failure(.responseError))
+                return
             }
-        }).resume()
+            
+            guard let data = data else {
+                completion(.failure(.responseError))
+                return
+            }
+            do {
+                let decoder                     = JSONDecoder()
+                decoder.keyDecodingStrategy     = .convertFromSnakeCase
+                decoder.dateDecodingStrategy    = .iso8601
+                let model                       = try decoder.decode(T.self, from: data)
+                
+                completion(.success(model))
+            } catch {
+                completion(.failure(.parseError(error)))
+            }
+        }
+        task.resume()
     }
-
 }

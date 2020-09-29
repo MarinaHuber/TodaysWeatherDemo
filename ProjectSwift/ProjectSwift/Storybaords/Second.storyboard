@@ -7,20 +7,66 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Second View Controller-->
         <scene sceneID="Kkc-Iu-2IN">
             <objects>
-                <viewController id="xsF-Xw-cVJ" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Jee-lJ-P1d">
+                <viewController storyboardIdentifier="second" id="xsF-Xw-cVJ" customClass="SecondViewController" customModule="ProjectSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="Jee-lJ-P1d">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search city" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F6T-wi-Y6D">
+                                <rect key="frame" x="57" y="244" width="300" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="OU3-BC-tjN"/>
+                                    <constraint firstAttribute="height" constant="47" id="uhM-n7-HRa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MyD-bU-CtN">
+                                <rect key="frame" x="232" y="331" width="125" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="125" id="EFS-Yw-Itc"/>
+                                </constraints>
+                                <state key="normal" title="Search"/>
+                                <connections>
+                                    <action selector="startSearch:" destination="xsF-Xw-cVJ" eventType="touchUpInside" id="kzT-hZ-fe9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3HW-lF-Bb9">
+                                <rect key="frame" x="57" y="331" width="125" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="125" id="71a-AK-Oi4"/>
+                                </constraints>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelSearch:" destination="xsF-Xw-cVJ" eventType="touchUpInside" id="Lep-Vu-bF3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="3HW-lF-Bb9" firstAttribute="top" secondItem="F6T-wi-Y6D" secondAttribute="bottom" constant="40" id="GrB-5Y-uSl"/>
+                            <constraint firstItem="3HW-lF-Bb9" firstAttribute="leading" secondItem="F6T-wi-Y6D" secondAttribute="leading" id="W38-f8-kqH"/>
+                            <constraint firstItem="F6T-wi-Y6D" firstAttribute="top" secondItem="gRG-iP-ltt" secondAttribute="top" constant="200" id="Wsm-FX-kY4"/>
+                            <constraint firstItem="F6T-wi-Y6D" firstAttribute="centerX" secondItem="Jee-lJ-P1d" secondAttribute="centerX" id="dYY-5Z-eQR"/>
+                            <constraint firstItem="MyD-bU-CtN" firstAttribute="trailing" secondItem="F6T-wi-Y6D" secondAttribute="trailing" id="fQm-zy-u7d"/>
+                            <constraint firstItem="MyD-bU-CtN" firstAttribute="top" secondItem="F6T-wi-Y6D" secondAttribute="bottom" constant="40" id="t1U-ui-HsA"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="gRG-iP-ltt"/>
                     </view>
+                    <connections>
+                        <outlet property="textFieldCity" destination="F6T-wi-Y6D" id="j0L-Nq-WRC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lge-7j-uP1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="130"/>
+            <point key="canvasLocation" x="137.68115942028987" y="129.91071428571428"/>
         </scene>
     </scenes>
 </document>

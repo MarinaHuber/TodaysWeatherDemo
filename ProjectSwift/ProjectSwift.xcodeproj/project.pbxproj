@@ -9,33 +9,43 @@
 /* Begin PBXBuildFile section */
 		9C3B33B2251B9B0B0063E574 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3B33B1251B9B0B0063E574 /* AppDelegate.swift */; };
 		9C3B33B4251B9B0B0063E574 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3B33B3251B9B0B0063E574 /* SceneDelegate.swift */; };
-		9C3B33B6251B9B0B0063E574 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3B33B5251B9B0B0063E574 /* ViewController.swift */; };
+		9C3B33B6251B9B0B0063E574 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3B33B5251B9B0B0063E574 /* FirstViewController.swift */; };
 		9C3B33BB251B9B0D0063E574 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C3B33BA251B9B0D0063E574 /* Assets.xcassets */; };
 		9C3B33BE251B9B0D0063E574 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C3B33BC251B9B0D0063E574 /* LaunchScreen.storyboard */; };
 		9C3B33C7251B9B470063E574 /* First.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C3B33C6251B9B470063E574 /* First.storyboard */; };
 		9C3B33C9251B9B610063E574 /* Second.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C3B33C8251B9B610063E574 /* Second.storyboard */; };
 		9C3B33CB251B9B6D0063E574 /* Third.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C3B33CA251B9B6D0063E574 /* Third.storyboard */; };
-		9C3B33D0251B9C640063E574 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3B33CF251B9C640063E574 /* APIService.swift */; };
+		9C3B33D0251B9C640063E574 /* APIServiceLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3B33CF251B9C640063E574 /* APIServiceLoader.swift */; };
 		9C3B33D2251B9D0D0063E574 /* APIServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3B33D1251B9D0D0063E574 /* APIServiceError.swift */; };
 		9C3B33D4251B9D3B0063E574 /* CityWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3B33D3251B9D3B0063E574 /* CityWeather.swift */; };
-		9C766CDB251D24A700D5929A /* DataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C766CDA251D24A700D5929A /* DataViewModel.swift */; };
+		9C766CDD251D2CE200D5929A /* APIEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C766CDC251D2CE200D5929A /* APIEndpoints.swift */; };
+		9C766CDF251D2DCE00D5929A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C766CDE251D2DCE00D5929A /* Constants.swift */; };
+		9CBADBB8252130210018E3B6 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBADBB7252130210018E3B6 /* SecondViewController.swift */; };
+		9CBADBBA2521304F0018E3B6 /* ThirdViewControoler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBADBB92521304F0018E3B6 /* ThirdViewControoler.swift */; };
+		9CBADBBF2521435E0018E3B6 /* UserDefault+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBADBBE2521435E0018E3B6 /* UserDefault+Ext.swift */; };
+		9CBADBC1252143A50018E3B6 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBADBC0252143A50018E3B6 /* City.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9C3B33AE251B9B0B0063E574 /* ProjectSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C3B33B1251B9B0B0063E574 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C3B33B3251B9B0B0063E574 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9C3B33B5251B9B0B0063E574 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9C3B33B5251B9B0B0063E574 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		9C3B33BA251B9B0D0063E574 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C3B33BD251B9B0D0063E574 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C3B33BF251B9B0D0063E574 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C3B33C6251B9B470063E574 /* First.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = First.storyboard; sourceTree = "<group>"; };
 		9C3B33C8251B9B610063E574 /* Second.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Second.storyboard; sourceTree = "<group>"; };
 		9C3B33CA251B9B6D0063E574 /* Third.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Third.storyboard; sourceTree = "<group>"; };
-		9C3B33CF251B9C640063E574 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		9C3B33CF251B9C640063E574 /* APIServiceLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceLoader.swift; sourceTree = "<group>"; };
 		9C3B33D1251B9D0D0063E574 /* APIServiceError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIServiceError.swift; sourceTree = "<group>"; };
 		9C3B33D3251B9D3B0063E574 /* CityWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityWeather.swift; sourceTree = "<group>"; };
-		9C766CDA251D24A700D5929A /* DataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewModel.swift; sourceTree = "<group>"; };
+		9C766CDC251D2CE200D5929A /* APIEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoints.swift; sourceTree = "<group>"; };
+		9C766CDE251D2DCE00D5929A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		9CBADBB7252130210018E3B6 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		9CBADBB92521304F0018E3B6 /* ThirdViewControoler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewControoler.swift; sourceTree = "<group>"; };
+		9CBADBBE2521435E0018E3B6 /* UserDefault+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefault+Ext.swift"; sourceTree = "<group>"; };
+		9CBADBC0252143A50018E3B6 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,14 +78,14 @@
 		9C3B33B0251B9B0B0063E574 /* ProjectSwift */ = {
 			isa = PBXGroup;
 			children = (
-				9C766CD9251D245400D5929A /* ViewModel */,
+				9CBADBBD2521432C0018E3B6 /* Utils */,
 				9C3B33CD251B9C2C0063E574 /* Views */,
-				9C3B33CC251B9C230063E574 /* Models */,
 				9C3B33CE251B9C360063E574 /* Services */,
+				9C3B33CC251B9C230063E574 /* Models */,
 				9C3B33C5251B9B2F0063E574 /* Storybaords */,
 				9C3B33B1251B9B0B0063E574 /* AppDelegate.swift */,
 				9C3B33B3251B9B0B0063E574 /* SceneDelegate.swift */,
-				9C3B33B5251B9B0B0063E574 /* ViewController.swift */,
+				9C766CDE251D2DCE00D5929A /* Constants.swift */,
 				9C3B33BA251B9B0D0063E574 /* Assets.xcassets */,
 				9C3B33BC251B9B0D0063E574 /* LaunchScreen.storyboard */,
 				9C3B33BF251B9B0D0063E574 /* Info.plist */,
@@ -97,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				9C3B33D3251B9D3B0063E574 /* CityWeather.swift */,
+				9CBADBC0252143A50018E3B6 /* City.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -104,6 +115,9 @@
 		9C3B33CD251B9C2C0063E574 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9C3B33B5251B9B0B0063E574 /* FirstViewController.swift */,
+				9CBADBB7252130210018E3B6 /* SecondViewController.swift */,
+				9CBADBB92521304F0018E3B6 /* ThirdViewControoler.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -111,18 +125,19 @@
 		9C3B33CE251B9C360063E574 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				9C3B33CF251B9C640063E574 /* APIService.swift */,
 				9C3B33D1251B9D0D0063E574 /* APIServiceError.swift */,
+				9C3B33CF251B9C640063E574 /* APIServiceLoader.swift */,
+				9C766CDC251D2CE200D5929A /* APIEndpoints.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
 		};
-		9C766CD9251D245400D5929A /* ViewModel */ = {
+		9CBADBBD2521432C0018E3B6 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				9C766CDA251D24A700D5929A /* DataViewModel.swift */,
+				9CBADBBE2521435E0018E3B6 /* UserDefault+Ext.swift */,
 			);
-			path = ViewModel;
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,13 +213,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C3B33B6251B9B0B0063E574 /* ViewController.swift in Sources */,
+				9C3B33B6251B9B0B0063E574 /* FirstViewController.swift in Sources */,
 				9C3B33D2251B9D0D0063E574 /* APIServiceError.swift in Sources */,
+				9CBADBBA2521304F0018E3B6 /* ThirdViewControoler.swift in Sources */,
 				9C3B33B2251B9B0B0063E574 /* AppDelegate.swift in Sources */,
+				9C766CDD251D2CE200D5929A /* APIEndpoints.swift in Sources */,
+				9CBADBC1252143A50018E3B6 /* City.swift in Sources */,
 				9C3B33D4251B9D3B0063E574 /* CityWeather.swift in Sources */,
-				9C3B33D0251B9C640063E574 /* APIService.swift in Sources */,
-				9C766CDB251D24A700D5929A /* DataViewModel.swift in Sources */,
+				9CBADBBF2521435E0018E3B6 /* UserDefault+Ext.swift in Sources */,
+				9C3B33D0251B9C640063E574 /* APIServiceLoader.swift in Sources */,
 				9C3B33B4251B9B0B0063E574 /* SceneDelegate.swift in Sources */,
+				9CBADBB8252130210018E3B6 /* SecondViewController.swift in Sources */,
+				9C766CDF251D2DCE00D5929A /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
