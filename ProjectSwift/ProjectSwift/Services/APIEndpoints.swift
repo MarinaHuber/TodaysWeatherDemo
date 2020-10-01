@@ -31,8 +31,6 @@ extension Endpoint {
         components.host       = "api.openweathermap.org"
         components.path       = path
         components.queryItems = queryItems
-        print(components.url?.absoluteString ?? "")
-
         return components.url
     }
 }

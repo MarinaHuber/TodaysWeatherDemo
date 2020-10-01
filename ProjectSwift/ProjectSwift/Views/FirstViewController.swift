@@ -48,9 +48,7 @@ extension FirstViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.row > citiesWeather.count {
-            print(indexPath.row)
-        }
+        if indexPath.row > citiesWeather.count { return }
         let cell = UITableViewCell()
         if citiesWeather.isEmpty == true {
             cell.textLabel?.text = "No city added"
@@ -64,7 +62,7 @@ extension FirstViewController: UITableViewDataSource {
 }
 
 extension FirstViewController: UITableViewDelegate {
-        
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selected = cityTableView.indexPathForSelectedRow?.row
         let storyboard = UIStoryboard(name: "Third", bundle: nil)
@@ -72,7 +70,15 @@ extension FirstViewController: UITableViewDelegate {
         detail.dataPassed = citiesWeather[selected!]
         navigationController?.pushViewController(detail, animated: true)
     }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        guard editingStyle == .delete else { return }
+        
+        self.citiesWeather.remove(at: indexPath.row)
+        cityTableView.deleteRows(at: [indexPath], with: .left)
+    }
 }
+
 
 extension FirstViewController: SecondViewControllerDelegate {
     

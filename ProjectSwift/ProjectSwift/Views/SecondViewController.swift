@@ -50,9 +50,7 @@ class SecondViewController: UIViewController {
                                 self.dismiss(animated: true, completion: nil)   
                         }
                         
-                        case .failure(let error):
-                            print(error)
-                        
+                        case .failure(let error):                        
                     }
                 }
                 
